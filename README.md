@@ -306,3 +306,70 @@ spawn(function()
         end)
     end
 end)
+spawn(function()
+    while true do wait()
+        pcall(function()
+            if _G.Steal then
+                for _,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+                    if string.find(v.Name, "Quake") or string.find(v.Name, "Phoenix") or string.find(v.Name, "Dark") or string.find(v.Name, "Vampire") or string.find(v.Name, "Gravity") or string.find(v.Name, "Ope") or string.find(v.Name, "Venom") or string.find(v.Name, "Candy") or string.find(v.Name, "Hollow")or string.find(v.Name, "Chilly")or string.find(v.Name, "Gas")or string.find(v.Name, "Flare")or string.find(v.Name, "Light Fruit")or string.find(v.Name, "Smoke")or string.find(v.Name, "Rumble")or string.find(v.Name, "Sand")or string.find(v.Name, "Magma")or string.find(v.Name, "Snow") then
+                        game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+                        if v.ToolTip == nil then
+                            repeat wait()
+                            until v.ToolTip ~= nil
+                        end
+                        _G.Aff = v.ToolTip
+                        wait(.1)
+                        WebHookFruit(v.Name,_G.Aff)
+                        if game:GetService("Players").LocalPlayer.PlayerGui.Storage.Frame.StoredDF1.Button.Text == "Store" then
+                            workspace:WaitForChild("UserData"):WaitForChild("User_" .. game.Players.LocalPlayer.UserId):WaitForChild("StoredDFRequest"):FireServer("StoredDF1")
+                            WebHookFruit(v.Name,_G.Aff)
+                        elseif game:GetService("Players").LocalPlayer.PlayerGui.Storage.Frame.StoredDF2.Button.Text == "Store" then
+                            workspace:WaitForChild("UserData"):WaitForChild("User_" .. game.Players.LocalPlayer.UserId):WaitForChild("StoredDFRequest"):FireServer("StoredDF2")
+                            WebHookFruit(v.Name,_G.Aff)
+                        elseif game:GetService("Players").LocalPlayer.PlayerGui.Storage.Frame.StoredDF3.Button.Text == "Store" then
+                            workspace:WaitForChild("UserData"):WaitForChild("User_" .. game.Players.LocalPlayer.UserId):WaitForChild("StoredDFRequest"):FireServer("StoredDF3")
+                            WebHookFruit(v.Name,_G.Aff)
+                        elseif game:GetService("Players").LocalPlayer.PlayerGui.Storage.Frame.StoredDF4.Button.Text == "Store" then
+                            workspace:WaitForChild("UserData"):WaitForChild("User_" .. game.Players.LocalPlayer.UserId):WaitForChild("StoredDFRequest"):FireServer("StoredDF4")
+                            WebHookFruit(v.Name,_G.Aff)
+                        elseif game:GetService("Players").LocalPlayer.PlayerGui.Storage.Frame.StoredDF5.Button.Text == "Store" then
+                            workspace:WaitForChild("UserData"):WaitForChild("User_" .. game.Players.LocalPlayer.UserId):WaitForChild("StoredDFRequest"):FireServer("StoredDF5")
+                        elseif game:GetService("Players").LocalPlayer.PlayerGui.Storage.Frame.StoredDF6.Button.Text == "Store" then
+                            workspace:WaitForChild("UserData"):WaitForChild("User_" .. game.Players.LocalPlayer.UserId):WaitForChild("StoredDFRequest"):FireServer("StoredDF6")
+                            WebHookFruit(v.Name,_G.Aff)
+                        elseif game:GetService("Players").LocalPlayer.PlayerGui.Storage.Frame.StoredDF5.Button.Text == "Store" then
+                            workspace:WaitForChild("UserData"):WaitForChild("User_" .. game.Players.LocalPlayer.UserId):WaitForChild("StoredDFRequest"):FireServer("StoredDF7")
+                            WebHookFruit(v.Name,_G.Aff)
+                        elseif game:GetService("Players").LocalPlayer.PlayerGui.Storage.Frame.StoredDF8.Button.Text == "Store" then
+                            workspace:WaitForChild("UserData"):WaitForChild("User_" .. game.Players.LocalPlayer.UserId):WaitForChild("StoredDFRequest"):FireServer("StoredDF8")
+                            WebHookFruit(v.Name,_G.Aff)
+                        elseif game:GetService("Players").LocalPlayer.PlayerGui.Storage.Frame.StoredDF9.Button.Text == "Store" then
+                            workspace:WaitForChild("UserData"):WaitForChild("User_" .. game.Players.LocalPlayer.UserId):WaitForChild("StoredDFRequest"):FireServer("StoredDF9")
+                            WebHookFruit(v.Name,_G.Aff)
+                        elseif game:GetService("Players").LocalPlayer.PlayerGui.Storage.Frame.StoredDF10.Button.Text == "Store" then
+                            workspace:WaitForChild("UserData"):WaitForChild("User_" .. game.Players.LocalPlayer.UserId):WaitForChild("StoredDFRequest"):FireServer("StoredDF10")
+                            WebHookFruit(v.Name,_G.Aff)
+                        elseif game:GetService("Players").LocalPlayer.PlayerGui.Storage.Frame.StoredDF11.Button.Text == "Store" then
+                            workspace:WaitForChild("UserData"):WaitForChild("User_" .. game.Players.LocalPlayer.UserId):WaitForChild("StoredDFRequest"):FireServer("StoredDF11")
+                            WebHookFruit(v.Name,_G.Aff)
+                        elseif game:GetService("Players").LocalPlayer.PlayerGui.Storage.Frame.StoredDF12.Button.Text == "Store" then
+                            workspace:WaitForChild("UserData"):WaitForChild("User_" .. game.Players.LocalPlayer.UserId):WaitForChild("StoredDFRequest"):FireServer("StoredDF12")
+                            WebHookFruit(v.Name,_G.Aff)
+                        end
+                    end
+                end
+            end
+        end)
+    end
+end)
+spawn(function()
+    game:GetService("RunService").RenderStepped:Connect(function()
+        pcall(function()
+            for _, Item in pairs(game.Workspace.Trees.Tree.Model:GetChildren()) do
+                if Item.ClassName == "Tool" then
+                    fireclickdetector(Item.Main.ClickDetector);
+                end
+            end
+        end)
+    end)
+end);
